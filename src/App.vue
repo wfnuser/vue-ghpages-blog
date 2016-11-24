@@ -3,6 +3,7 @@
     <header class="header">
       <router-link to="/">{{ title }}</router-link>
       <div style="clear: both"></div>
+      <router-link to="/" class="signature">{{ signature }}</router-link>
       <input class="search-bar" placeholder="Search.."
         ref="searchBar" v-model="keyword"
         @click="selectSearchText"
@@ -25,6 +26,7 @@
     data () {
       return {
         title: conf.blogTitle,
+        signature: conf.blogSignature,
         keyword: ''
       }
     },
